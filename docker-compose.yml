@@ -172,8 +172,8 @@ services:
         ports:
             - '${IP_ADDRESS}:9009:9000'
         environment:
-            - MINIO_ACCESS_KEY=minio
-            - MINIO_SECRET_KEY=minio123
+            - MINIO_ACCESS_KEY=${MINIOUN}
+            - MINIO_SECRET_KEY=${MINIOPASS}
         volumes:
             - './minio:/root/.minio'
             - '${PWD}:/export'
@@ -294,6 +294,8 @@ services:
             - PLEX_UID=${PUID}
             - PLEX_GID=${PGID}
         hostname: ${HOSTNAME}
+        devices:
+            - '/dev/dri:/dev/dri'
         volumes:
             - './plex:/config'
             - './plex/transcode:/transcode'
@@ -339,6 +341,25 @@ services:
             - '${DLDIR}/completed:/data/completed'
             - '${MOVIEDIR}:/movies'
             - '/etc/localtime:/etc/localtime:ro'
+
+    # ----------------------------------------
+    # SABNZBD
+    # ----------------------------------------
+    sabnzbd:
+        image: linuxserver/sabnzbd
+        container_name: sabnzbd
+        restart: unless-stopped
+        network_mode: "bridge"
+        ports:
+            - '${IP_ADDRESS}:8080:8080'
+            - '${IP_ADDRESS}:9090:9090'
+        environment:
+            - PUID=${PUID}
+            - PGID=${PGID}
+            - TZ=${TZ}
+        volumes:
+            - './sabnzbd:/config'
+            - '${DLDIR}/completed:/downloads'
 
     # ----------------------------------------
     # SICKCHILL

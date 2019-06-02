@@ -146,6 +146,13 @@ icon = "muximux-sonarr"
 color = "#ffe599"
 enabled = "true"
 
+[Sabnzbd]
+name = "SABnzbd"
+url = "http://locip:8080"
+icon = "muximux-arrow-down"
+color = "#ffff00"
+enabled = "true"
+
 [SickChill]
 name = "SickChill"
 url = "http://locip:8081"

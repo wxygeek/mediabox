@@ -158,6 +158,7 @@ mkdir -p ombi
 mkdir -p "plex/Library/Application Support/Plex Media Server/Logs"
 mkdir -p portainer
 mkdir -p radarr
+mkdir -p sabnzbd
 mkdir -p sickchill
 mkdir -p sonarr
 mkdir -p tautulli
@@ -249,8 +250,8 @@ printf "\\n\\n"
 # Configure the access to the Deluge Daemon
 # The same credentials can be used for NZBGet's webui
 if [ -z "$daemonun" ]; then
-echo "You need to set a username and password for programs to access"
-echo "The Deluge daemon and NZBGet's API and web interface."
+echo "You need to set a username and password for access to some items"
+echo "MINIO, the Deluge daemon, and NZBGet's API and web interface require credentials"
 read -r -p "What would you like to use as the access username?: " daemonun
 read -r -p "What would you like to use as the access password?: " daemonpass
 printf "\\n\\n"
@@ -280,6 +281,8 @@ echo "$daemonun":"$daemonpass":10 >> ./delugevpn/config/auth
 {
 echo "CPDAEMONUN=$daemonun"
 echo "CPDAEMONPASS=$daemonpass"
+echo "MINIOUN=$daemonun"
+echo "MINIOPASS=$daemonpass"
 echo "NZBGETUN=$daemonun"
 echo "NZBGETPASS=$daemonpass"
 } >> .env
