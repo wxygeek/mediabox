@@ -92,9 +92,8 @@ Once the prerequisites are all taken care of you can move forward with using med
 3.  Run the mediabox.sh script: `$ ./mediabox.sh`  **Read below for the script questions**
 
 4.  To upgrade Mediabox at anytime, re-run the mediabox script: `$ ./mediabox.sh`
-    *   See Upgrading Mediabox below if you need to do a one-time upgrade to get to the self-updating version.
 
-**Please be prepared to supply the following details after you run Step 4 above.**
+### Please be prepared to supply the following details after you run Step 4 above.
 
 As the script runs you will be prompted for:
 
@@ -118,18 +117,6 @@ As the script runs you will be prompted for:
     *   **password**
 
 Upon completion, the script will launch your mediabox containers.
-
-**Upgrading mediabox:**
-
-This is only necessary once - and only if you dowloaded Mediabox before auto-update was added into the project.
-
-1.  Change directory into mediabox: `$ cd your/path/to/mediabox/`
-
-2.  Git Stash any alterations to local files: `$ git stash`
-
-3.  Git pull the changes to the Mediabox Project: `$ git pull`
-
-4.  Run the mediabox.sh script: `$ ./mediabox.sh` << Redo just this step anytime you want/need to upgrade Mediabox
 
 ### **Mediabox has been tested to work on Ubuntu 16.04 LTS / 18.04 LTS - Server and Desktop**
 
