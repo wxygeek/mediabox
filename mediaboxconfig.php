@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+</head>
 <style>
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: lightblue;
 }
 </style>
-</head>
-<a href="https://cash.me/$TomMorgan" target="_blank"><img src="https://img.shields.io/badge/Donate-SquareCash-brightgreen.svg"></a><br />
-<body>
-<body style="background-color:lightblue;">
+<a href="https://cash.me/$TomMorgan" target="_blank"><img src="https://img.shields.io/badge/Donate-SquareCash-brightgreen.svg" alt="badge"></a><br />
 <h1>Welcome to Mediabox!</h1>
 <h3><u>Basic Information & Configuration</u></h3>
-<b><u>Notes:</u></b><br /> 
+<b><u>Notes:</u></b><br />
+<ul> 
 <li>Radarr and Couchpotato do the same thing = Movie Management</li>
 <li>Sonarr and SickChill do the same thing = TV Show Management</li>
 <li>Lidar and Headphones do the same thing = Music Management</li>
+</ul>
 -- Generally you will only want to choose/use one of each.<br />
+<ul>
 <li>The <b>Minio</b> login is: daemonun / daemonpass</li>
 <li><b>PROXY</b> The DelugeVPN Container provides an http proxy via the PIA connection at: locip:8118
+</ul>
 <br />
 <h3><u>Manual Configuration steps:</u></h3>  
 <b><u>Couchpotato:</u></b><br />
@@ -129,11 +132,12 @@ If you are having issues with Mediabox or any of your continers please take look
 Below are the variables in your .env file: (<b>NOTE</b>: For your security PIA credentials are no longer shown here.)
 <pre>
 <?php
-echo file_get_contents("./env.txt");
+$envfile =  file_get_contents("./env.txt");
+echo $envfile;
 ?>
 </pre>
 If you enjoy the project -- Fuel it with some caffeine :)<br /><br />
-<a href="https://cash.me/$TomMorgan" target="_blank"><img src="https://img.shields.io/badge/Donate-SquareCash-brightgreen.svg"></a><br />
+<a href="https://cash.me/$TomMorgan" target="_blank"><img src="https://img.shields.io/badge/Donate-SquareCash-brightgreen.svg" alt="badge"></a><br />
 <br />
 </body>
 </html>

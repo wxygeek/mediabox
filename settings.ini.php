@@ -1,4 +1,4 @@
-; <?php die('Access denied'); ?>
+; <?php exit('Access denied'); ?>
 [general]
 title = "Mediabox"
 branch = "master"
