@@ -51,22 +51,22 @@ Install the prerequisite packages:
 
 **Note** - Mediabox uses Docker CE as the default Docker version - if you skip this and run with older/other Docker versions you may have issues.
 
-1. Uninstall old versions - It’s OK if apt and/or snap report that none of these packages are installed.  
+1.  Uninstall old versions - It’s OK if apt and/or snap report that none of these packages are installed.  
     `$ sudo apt remove docker docker-engine docker.io containerd runc`  
     `$ sudo snap remove docker`  
 
-2. Install Docker CE:  
+2.  Install Docker CE:  
     `$ curl -fsSL https://get.docker.com -o get-docker.sh`  
     `$ sudo sh get-docker.sh`  
 
-3. Install Docker-Compose:  
+3.  Install Docker-Compose:  
 
     ```bash
     sudo curl -L https://github.com/docker/compose/releases/download/1.24.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
     ```
 
-4. Set the permissions: `$ sudo chmod +x /usr/local/bin/docker-compose`  
-5. Verify the Docker Compose installation: `$ docker-compose -v`  
+4.  Set the permissions: `$ sudo chmod +x /usr/local/bin/docker-compose`  
+5.  Verify the Docker Compose installation: `$ docker-compose -v`  
 
 Add the current user to the docker group:
 
@@ -84,32 +84,32 @@ Reboot your machine manually, or using the command line:
 
 Once the prerequisites are all taken care of you can move forward with using mediabox.
 
-1. Clone the mediabox repository: `$ git clone https://github.com/tom472/mediabox.git`
-2. Change directory into mediabox: `$ cd mediabox/`
-3. Run the mediabox.sh script: `$ ./mediabox.sh`  **Read below for the script questions**
-4. To upgrade Mediabox at anytime, re-run the mediabox script: `$ ./mediabox.sh`
+1.  Clone the mediabox repository: `$ git clone https://github.com/tom472/mediabox.git`
+2.  Change directory into mediabox: `$ cd mediabox/`
+3.  Run the mediabox.sh script: `$ ./mediabox.sh`  **Read below for the script questions**
+4.  To upgrade Mediabox at anytime, re-run the mediabox script: `$ ./mediabox.sh`
     * See Upgrading Mediabox below if you need to do a one-time upgrade to get to the self-updating version.
 
 **Please be prepared to supply the following details after you run Step 4 above.**
 
 As the script runs you will be prompted for:
 
-1. Your Private Internet Access credentials
+1.  Your Private Internet Access credentials
     * **username**
     * **password**
 
-2. The version of Plex you want to run
+2.  The version of Plex you want to run
     * **latest**
     * **public**
     * **plexpass**
 
     Note: If you choose plexpass as your version you may optionally specify CLAIM_TOKEN - you can get your claim token by logging in at [plex.tv/claim](https://www.plex.tv/claim)
 
-3. The "style" of Portainer to use
+3.  The "style" of Portainer to use
     * **auth** (will require a password, require a persistent volume map, and will need you to select the endpoint to manage)
     * **noauth** (will not require a password for access and will automatically connect to the local Docker sock endpoint)
 
-4. Credentials for the NBZGet interface and the Deluge daemon which needed for the CouchPotato container.
+4.  Credentials for the NBZGet interface and the Deluge daemon which needed for the CouchPotato container.
     * **username**
     * **password**
 
@@ -119,10 +119,10 @@ Upon completion, the script will launch your mediabox containers.
 
 This is only necessary once - and only if you dowloaded Mediabox before auto-update was added into the project.
 
-1. Change directory into mediabox: `$ cd your/path/to/mediabox/`
-2. Git Stash any alterations to local files: `$ git stash`
-3. Git pull the changes to the Mediabox Project: `$ git pull`
-4. Run the mediabox.sh script: `$ ./mediabox.sh` << Redo just this step anytime you want/need to upgrade Mediabox
+1.  Change directory into mediabox: `$ cd your/path/to/mediabox/`
+2.  Git Stash any alterations to local files: `$ git stash`
+3.  Git pull the changes to the Mediabox Project: `$ git pull`
+4.  Run the mediabox.sh script: `$ ./mediabox.sh` << Redo just this step anytime you want/need to upgrade Mediabox
 
 ### **Mediabox has been tested to work on Ubuntu 16.04 LTS / 18.04 LTS - Server and Desktop**
 
