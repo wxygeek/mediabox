@@ -132,12 +132,12 @@ Watchtower will detect the change, download the new image, gracefully stop the c
 <h1>Troubleshooting</h1>
 If you are having issues with Mediabox or any of your continers please take look at the settings being used.<br />
 Below are the variables in your .env file: (<b>NOTE</b>: For your security PIA credentials are no longer shown here.)
-<pre>
-<?php
+
+<textarea><?php 
 $envfile =  file_get_contents("./env.txt");
-echo $envfile;
-?>
-</pre>
+echo esc_textarea( $envfile ); 
+?></textarea>
+
 If you enjoy the project -- Fuel it with some caffeine :)<br /><br />
 <a href="https://cash.me/$TomMorgan" target="_blank"><img src="https://img.shields.io/badge/Donate-SquareCash-brightgreen.svg" alt="badge"></a><br />
 <br />
