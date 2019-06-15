@@ -89,11 +89,11 @@ Once the prerequisites are all taken care of you can move forward with using med
 
 2.  Change directory into mediabox: `$ cd mediabox/`
 
-3.  Run the mediabox.sh script: `$ ./mediabox.sh`  **Read below for the script questions**
+3.  Run the mediabox.sh script: `$ ./mediabox.sh`  (**See below for the script questions**)
 
 4.  To upgrade Mediabox at anytime, re-run the mediabox script: `$ ./mediabox.sh`
 
-### Please be prepared to supply the following details after you run Step 4 above.
+### Please be prepared to supply the following details after you run Step 3 above
 
 As the script runs you will be prompted for:
 
