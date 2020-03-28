@@ -130,14 +130,6 @@ icon = "muximux-plex"
 color = "#df691a"
 enabled = "true"
 
-[Portainer]
-name = "Portainer"
-url = "http://locip:9000"
-scale = 1
-icon = "muximux-tree"
-color = "#00ffff"
-enabled = "true"
-
 [Radarr]
 name = "Radarr"
 url = "http://locip:7878"
